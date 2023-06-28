@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitt's Law - Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style2.css">
+</head>
+<body class>
+
+    <header>
+        <div class="container">
+          <div class="logo">
+            <h1>Fitt's Law</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="game.html">Game</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main>    
+<div id ="game-screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="src\fittslaw.js"></script>
+</div>  
+            <div id= "instruction-container">            <button id="instruction-button" class ="play-button">Instructions</button>
+            </div>
+
+<button id="mode-button">Mode</button>
+
+  
+
+      
+  </main>
+  <div id="instruction-modal">
+    <ul>
+      <li>Move the cursor to the starting position</li>
+      <li>After a delay, a target will apear</li>
+      <li>Move to the target <b>as quickly</b> as you can</li>
+    </ul>
+    <button id="close-button" class = "play-button">Close</button>
+  </div>
+  
+  <style>
+    #instruction-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      padding: 20px;
+      border: 10px solid black;
+    }
+  </style>
+  
+  <script>
+    const instructionButton = document.querySelector('#instruction-button');
+    const instructionModal = document.querySelector('#instruction-modal');
+    const closeButton = document.querySelector('#close-button');
+  
+    instructionButton.addEventListener('click', () => {
+      instructionModal.style.display = 'block';
+    });
+  
+    closeButton.addEventListener('click', () => {
+      instructionModal.style.display = 'none';
+    });
+  </script>
+
+  <footer>
+  </footer>
+</body> 
+</html>
